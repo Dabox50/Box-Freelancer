@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Box Lance</title>
+</head>
+
+<body>
+  <div class="page">
+    <header class="header" id="siteHeader">
+      <div class="logo">
+        <img src="./images/logo.svg" alt="Logo" width="80px">
+      </div>
+
+      <nav class="nav" id="navMenu">
+        <a href="index.html">Home</a>
+        <a href="../Dashboard Page/index.html">Browse Jobs</a>
+        <a href="../Create Account Page/index.html">Sign up</a>
+        <a href="../About Us Page/index.html">About</a>
+        <a class="Login-btn" href="../Login Page/index.html">Login</a>
+      </nav>
+
+      <div class="menu-toggle" id="menuToggle">
+        <img src="../Dashboard Page/Icon Images/menu.png" alt="hamburger" width="10px">
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-content">
+          <p class="eyebrow">Box Freelancer Local</p>
+          <h1>Find Local Talent Or Your Next Gig</h1>
+          <p>Connecting and discovering clients and skilled freelancers in your area.</p>
+          <div class="hero-actions">
+            <a class="button1" href="../Dashboard Page/index.html">Post a Job</a>
+            <a class="button-secondary" href="../Dashboard Page/index.html">Find Work</a>
+          </div>
+        </div>
+        
+        <aside class="hero-visual">
+          <span class="tag">Preview Deck</span>
+          <p class="caption">Inspired by A.Y.P/Y.A.P HUB giving us the chance to build a system that helps youths in Africa to acquire jobs opportuntity after learning skills to help them through life.</p>
+          <div class="stats">
+            <img class="img" src="./images/Hero.png" alt="Hero Visual">
+          </div>
+        </aside>
+      </section>
+
+      <section class="section" id="services">
+        <div class="section-head">
+          <h2 class="section-title">Features Overview</h2>
+          <p class="section-copy">
+            <img src="./images/Guide.png" alt="Arrow Guide" width="300px">
+          </p>
+        </div>
+        <div class="grid">
+          <article class="service-card">
+            <div class="badge">
+              <img src="./images/Verified.png" alt="" width="70px">
+            </div>
+
+            <h3>Verified Accounts</h3>
+            <p>Scroll through multi- skilled and trusted accounts to find what you are looking for, right here we present young, adult, graduate and undergraduate skilled individuals to showcase their potential.</p>
+          </article>
+          <article class="service-card">
+            <div class="badge">
+              <img src="./images/Payment.png" alt="" width="70px">
+            </div>
+
+            <h3>Get Paid</h3>
+            <p>Get paid showcasing your skill to clients that are in need of your skill all over the Nigeria</p>
+          </article>
+          <article class="service-card">
+            <div class="badge">
+              <img src="./images/Discovery.png" alt="" width="70px">
+            </div>
+
+            <h3>Discovery</h3>
+            <p> Discover clients in your nearby area or another state, that are in need of your service, post your work skills to attract clients all over Nigeria</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="showcase">
+        <div class="showcase">
+          <div class="showcase-visual">
+            <img class="img2" src="./images/Illustration.png" alt="Illustration">
+          </div>
+
+          <div class="showcase-content">
+            <h2 class="section-title">About Us</h2>
+            <p class="section-copy">Box Freelancer connects skilled freelancers with clinets who need trusted service nearby or faraway. We make it easy to <strong>showcase skills, post jobs, chat, and get paid securely -- all in one place. </p>
+            <div class="highlight-cards" id="insights">
+              <div class="highlight-card">
+                <strong>Our Goals</strong>
+                Our goal is to help people find work, build trust, and grow locally through verified connections and fair opportunities
+              </div>
+              <div class="highlight-card">
+                <strong>How It Works</strong>
+                Sign up, Post or Find Jobs that's attached to your skill, Connect with clients and work then just paid
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="cta" id="contact">
+        <h2>Ready to ignite your skill with a Box FreeLancer?</h2>
+        <p>Discover a collaborative jobs with clients and other skilled individuals like you, Click on the Start Your Discovery to start</p>
+        <a class="button2" href="../Dashboard Page/index.html">Start the Discovery</a>
+      </section>
+
+    </main>
+
+    <footer class="footer">
+      <span>© 2025 Box FreeLancer. All rights reserved.</span>
+
+      <div class="social-links">
+        <a href="/">
+          <img class="img4" src="./images/Facebook.png" alt="Facebook">
+        </a>
+        <a href="/">
+          <img class="img5" src="./images/Instagam.png" alt="Instagram">
+        </a>
+        <a href="/">
+          <img class="img6" src="./images/Twitter.png" alt="Twitter">
+        </a>
+      </div>
+
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="../Dashboard Page/index.html">Browse Jobs</a>
+        <a href="../Create Account Page/index.html">Sign up</a>
+        <a href="../About Us Page/index.html">About</a>
+      </nav>
+    
+    </footer>
+
+  </div>
+
+  <script>
+    const header = document.getElementById("siteHeader");
+    const menuToggle = document.getElementById("menuToggle");
+    const navMenu = document.getElementById("navMenu");
+
+    const closeMenu = () => {
+      navMenu.classList.remove("open");
+      menuToggle.setAttribute("aria-expanded", "false");
+    };
+
+    menuToggle.addEventListener("click", () => {
+      const isOpen = navMenu.classList.toggle("open");
+      menuToggle.setAttribute("aria-expanded", String(isOpen));
+    });
+
+    navMenu.querySelectorAll("a").forEach(link => {
+      link.addEventListener("click", closeMenu);
+    });
+    
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 20) {
+        header.classList.add("scrolled");
+      } else {
+        header.classList.remove("scrolled");
+      }
+    });
+  </script>
+</body>
+</html>

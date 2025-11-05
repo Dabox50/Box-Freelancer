@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Dashboard & Profile</title>
+</head>
+<body>
+  <header class="header">
+    <div class="header-img">
+      <img class="img" src="../Welcome Page/images/logo.svg" alt="Logo" width="80px">
+    </div>
+
+    <img class="hamburger" id="hamburger" src="./Icon Images/menu.png" alt="Menu Icon" width="20px" margin-right="200px">
+
+    <div class="notif">
+      <div class="bell" aria-label="Notifications">
+        <img src="./Icon Images/notification.png" alt="Notification Bell" width="20px">
+        <span class="badge">3</span>
+      </div>
+    </div>
+  </header>
+
+  <main id="dashboard" class="page">
+    <section class="Combine">
+      <aside class="sidebar" id="sidebar">
+        <header>
+          <span class="eyebrow">Menu</span>
+        </header>
+        <nav>
+          <ul>
+            <li><a href="../Welcome Page/index.html">Welcome</a></li>
+            <li><a class="active" href="index.html">Dashboard</a></li>
+            <li><a href="../Jobs Preview and Rating Page/index.html">My Jobs Reviews & Ratings</a></li>
+            <li><a href="../Chat Page/index.html">Messages</a></li>
+            <li><a href="../Payment Page/index.html">Payments</a></li>
+            <li><a href="../Profile Page/index.html">Profile</a></li>
+            <li><a href="../Settings Page/index.html">Settings</a></li>
+          </ul>
+        </nav>
+      </aside>
+
+      <section class="dashboard-grid">
+        <div class="content">
+          <section class="section">
+            <div class="section-head">
+              <h2 class="eyebrow">For Clients</h2>
+              <a class="button1" href="#">Post a Job</a>
+            </div>
+
+            <div class="card">
+              <form class="form-grid">
+                <div class="field">
+                  <label>Job Title</label>
+                  <input type="text" placeholder="e.g., React Developer for MVP" />
+                </div>
+
+                <div class="field">
+                  <label for="job-category">Category</label>
+                  <select id="job-category" name="category">
+                    <option>Development</option>
+                    <option>Design</option>
+                    <option>Writing</option>
+                    <option>Marketing</option>
+                  </select>
+                </div>
+
+                <div class="field form-grid full">
+                  <label>Description</label>
+                  <textarea placeholder="Describe the project"></textarea>
+                </div>
+
+                <div class="field">
+                  <label>Location</label>
+                  <input type="text" placeholder="Remote / City, Country" />
+                </div>
+
+                <div class="field">
+                  <label>Budget</label>
+                  <input type="number" placeholder="$" />
+                </div>
+
+                <div class="field">
+                  <label>Timeline</label>
+                  <input type="text" placeholder="e.g., 4–6 weeks" />
+                </div>
+
+                <div class="field form-grid full">
+                  <button type="button" class="button2">Create Job</button>
+                </div>
+              </form>
+
+              <div class="card1">
+                <h3 class="eyebrow">Active Jobs</h3>
+                <div class="list">
+                  <div class="item">
+                    <div>
+                      <strong>Mobile App UI Revamp</strong>
+                      <div class="meta"><span>Remote</span><span>Budget: $2,500</span><span>Posted 2d ago</span></div>
+                    </div>
+                    <a class="button-secondary" href="#">Manage</a>
+                  </div>
+                  <div class="item">
+                    <div>
+                      <strong>API Integration – Payments</strong>
+                      <div class="meta"><span>Lagos</span><span>Budget: $1,200</span><span>Posted 5d ago</span></div>
+                    </div>
+                    <a class="button-secondary" href="#">Manage</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card1">
+                <h3 class="eyebrow">Past Jobs</h3>
+                <div class="list">
+                  <div class="item">
+                    <div>
+                      <strong>Landing Page Design</strong>
+                      <div class="meta"><span>Remote</span><span>$800</span><span>Completed</span></div>
+                    </div>
+                    <a class="button-secondary" href="#">View</a>
+                  </div>
+                  <div class="item">
+                    <div>
+                      <strong>SEO Content Pack</strong>
+                      <div class="meta"><span>Remote</span><span>$600</span><span>Completed</span></div>
+                    </div>
+                    <a class="button-secondary" href="#">View</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </section>
+    </section>
+
+    <section class="section2">
+      <div class="section-head2">
+        <h2 class="section-text">For Freelancers</h2>
+      </div>
+
+      <div class="card2">
+        <div class="filters">
+          <input type="text" placeholder="Search jobs" />
+          <select name="category" aria-label="Filter by category">
+            <option>Category</option>
+            <option>Development</option>
+            <option>Design</option>
+            <option>Writing</option>
+          </select>
+          <select name="category" aria-label="Filter by category">
+            <option>Budget</option>
+            <option><$500</option>
+            <option>$500–$2,000</option>
+            <option>>$2,000</option>
+          </select>
+          <select name="category" aria-label="Filter by category">
+            <option>Distance</option>
+            <option>Remote</option>
+            <option>< 10km</option>
+            <option>< 50km</option>
+          </select>
+          <input type="text" placeholder="Skills e.g., React, Figma" />
+        </div>
+      </div>
+
+      <div class="feed">
+        <div class="feed-post">
+          <div class="post-header">
+            <div class="poster-info">
+              <div class="avatar-small">C</div>
+              <div>
+                <strong>TechCorp Solutions</strong>
+                <div class="post-time">1h ago</div>
+              </div>
+            </div>
+            <button class="more-btn">⋯</button>
+          </div>
+
+          <div class="post-content">
+            <strong>React Developer for SaaS Dashboard</strong>
+            <p>Build responsive components and integrate REST APIs for our enterprise platform.</p>
+            <div class="job-meta">
+              <span class="meta-item">📍 Remote</span>
+              <span class="meta-item">💰 $1,800</span>
+              <span class="meta-item">⏱️ 4-6 weeks</span>
+            </div>
+          </div>
+
+          <div class="post-actions">
+            <button class="action-btn" title="View Details">
+              <img src="./Icon Images/Eye icon.png" alt="View Icon" width="25px">
+              <span>View</span>
+            </button>
+            <button class="action-btn like-btn" title="Like">
+              <img src="./Icon Images/Heart icon.png" alt="Heart Icon" width="20px">
+              <span>Like</span>
+            </button>
+            <button class="action-btn" title="Comment">
+              <img src="./Icon Images/Comment Icon.png" alt="Comment Icon" width="20px">
+              <span>Comment</span>
+            </button>
+            <button class="action-btn" title="Share">
+              <img src="./Icon Images/Share Icon.png" alt="Share Icon" width="20px">
+              <span>Share</span>
+            </button>
+            <button class="action-btn apply-btn primary">Apply Now</button>
+          </div>
+        </div>
+
+        <div class="feed-post">
+          <div class="post-header">
+            <div class="poster-info">
+              <div class="avatar-small">BD</div>
+              <div>
+                <strong>BrandDesigns Agency</strong>
+                <div class="post-time">3h ago</div>
+              </div>
+            </div>
+            <button class="more-btn">⋯</button>
+          </div>
+
+          <div class="post-content">
+            <strong>Brand Identity & Logo Refresh</strong>
+            <p>Modernize existing brand assets and create a comprehensive style guide for our growing startup.</p>
+            <div class="job-meta">
+              <span class="meta-item">📍 Abuja</span>
+              <span class="meta-item">💰 $900</span>
+              <span class="meta-item">⏱️ 2-3 weeks</span>
+            </div>
+          </div>
+
+          <div class="post-actions">
+            <button class="action-btn" title="View Details">
+              <img src="./Icon Images/Eye icon.png" alt="View Icon" width="25px">
+              <span>View</span>
+            </button>
+            <button class="action-btn like-btn" title="Like">
+              <img src="./Icon Images/Heart icon.png" alt="Heart Icon" width="20px">
+              <span>Like</span>
+            </button>
+            <button class="action-btn" title="Comment">
+              <img src="./Icon Images/Comment Icon.png" alt="Comment Icon" width="20px">
+              <span>Comment</span>
+            </button>
+            <button class="action-btn" title="Share">
+              <img src="./Icon Images/Share Icon.png" alt="Share Icon" width="20px">
+              <span>Share</span>
+            </button>
+            <button class="action-btn apply-btn primary">Apply Now</button>
+          </div>
+        </div>
+
+        <div class="feed-post">
+          <div class="post-header">
+            <div class="poster-info">
+              <div class="avatar-small">TW</div>
+              <div>
+                <strong>TechWrite Inc</strong>
+                <div class="post-time">Today</div>
+              </div>
+            </div>
+            <button class="more-btn">⋯</button>
+          </div>
+
+          <div class="post-content">
+            <strong>Technical Writer – API Docs</strong>
+            <p>Author clear, concise documentation for developers. Experience with REST APIs and developer tools required.</p>
+            <div class="job-meta">
+              <span class="meta-item">📍 Remote</span>
+              <span class="meta-item">💰 $1,200</span>
+              <span class="meta-item">⏱️ Ongoing</span>
+            </div>
+          </div>
+
+          <div class="post-actions">
+            <button class="action-btn" title="View Details">
+              <img src="./Icon Images/Eye icon.png" alt="View Icon" width="25px">
+              <span>View</span>
+            </button>
+            <button class="action-btn like-btn" title="Like">
+              <img src="./Icon Images/Heart icon.png" alt="Heart Icon" width="20px">
+              <span>Like</span>
+            </button>
+            <button class="action-btn" title="Comment">
+              <img src="./Icon Images/Comment Icon.png" alt="Comment Icon" width="20px">
+              <span>Comment</span>
+            </button>
+            <button class="action-btn" title="Share">
+              <img src="./Icon Images/Share Icon.png" alt="Share Icon" width="20px">
+              <span>Share</span>
+            </button>
+            <button class="action-btn apply-btn primary">Apply Now</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+      const sidebar = document.getElementById('sidebar')
+
+      hamburger.addEventListener('click', () => {
+          sidebar.classList.toggle('show');
+      });
+  </script>
+</body>
+</html>

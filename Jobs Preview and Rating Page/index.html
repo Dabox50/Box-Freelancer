@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Reviews & Ratings</title>
+</head>
+<body>
+  <header class="header">
+    <div class="header-img">
+      <img class="img" src="../Welcome Page/images/logo.svg" alt="Logo" width="80px">
+    </div>
+
+    <img class="hamburger" id="hamburger" src="../Dashboard Page/Icon Images/menu.png" alt="Menu Icon" width="24">
+
+    <div class="notif">
+      <div class="bell" aria-label="Notifications">
+        <img src="../Dashboard Page/Icon Images/notification.png" alt="Notification Bell" width="20">
+        <span class="badge">3</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="page">
+    <section class="layout">
+      <aside class="sidebar" id="sidebar">
+        <header>
+          <span class="eyebrow">Menu</span>
+        </header>
+        <nav>
+          <ul>
+            <li><a href="../Welcome Page/index.html">Welcome</a></li>
+            <li><a href="../Dashboard Page/index.html">Dashboard</a></li>
+            <li><a class="active" href="index.html">My Jobs Reviews & Ratings</a></li>
+            <li><a href="../Chat Page/index.html">Messages</a></li>
+            <li><a href="../Payment Page/index.html">Payments</a></li>
+            <li><a href="../Profile Page/index.html">Profile</a></li>
+            <li><a href="../Settings Page/index.html">Settings</a></li>
+          </ul>
+        </nav>
+      </aside>
+
+      <section class="content-area">
+        <div class="profile-banner">
+          <div>
+            <h1 class="page-title">Reviews & Ratings</h1>
+            <p class="page-subtitle">Feedback from clients across completed engagements</p>
+          </div>
+          <div class="rating-summary">
+            <div class="rating-score">4.8</div>
+            <div class="rating-meta">
+              <div class="stars" aria-label="Average rating 4.8 out of 5">
+                <span>★</span><span>★</span><span>★</span><span>★</span><span class="dim">★</span>
+              </div>
+              <span class="rating-count">68 reviews</span>
+            </div>
+          </div>
+        </div>
+
+        <section class="reviews-section">
+          <header class="section-header">
+            <div>
+              <h2 class="section-title">Client Voices</h2>
+              <p class="section-description">Every review highlights collaboration, deadlines, and craft.</p>
+            </div>
+            <button class="button-primary" id="open-review">Leave a Review</button>
+          </header>
+
+          <div class="reviews-grid">
+            <article class="review-card">
+              <div class="review-header">
+                <div class="reviewer-initial">JD</div>
+                <div>
+                  <h3 class="reviewer-name">Jane Doe</h3>
+                  <p class="reviewer-role">Product Designer · Dashboard Redesign</p>
+                </div>
+                <div class="stars" aria-label="Rating 5 out of 5">
+                  <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                </div>
+              </div>
+              <p class="review-text">Delivered a seamless design system translation into React components. Communication stayed clear throughout every sprint.</p>
+              <time class="review-date" datetime="2024-05-18">May 18, 2024</time>
+            </article>
+
+            <article class="review-card">
+              <div class="review-header">
+                <div class="reviewer-initial">MK</div>
+                <div>
+                  <h3 class="reviewer-name">Michael Karim</h3>
+                  <p class="reviewer-role">CTO · Mobile Wallet MVP</p>
+                </div>
+                <div class="stars" aria-label="Rating 4 out of 5">
+                  <span>★</span><span>★</span><span>★</span><span>★</span><span class="dim">★</span>
+                </div>
+              </div>
+              <p class="review-text">Handled payment integrations and testing with impressive turnaround time. Appreciated proactive status updates.</p>
+              <time class="review-date" datetime="2024-04-02">Apr 2, 2024</time>
+            </article>
+
+            <article class="review-card">
+              <div class="review-header">
+                <div class="reviewer-initial">SL</div>
+                <div>
+                  <h3 class="reviewer-name">Sara Leung</h3>
+                  <p class="reviewer-role">Founder · E-learning Platform</p>
+                </div>
+                <div class="stars" aria-label="Rating 5 out of 5">
+                  <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                </div>
+              </div>
+              <p class="review-text">Went above expectations on accessibility compliance. Final delivery launched without regressions.</p>
+              <time class="review-date" datetime="2024-03-14">Mar 14, 2024</time>
+            </article>
+          </div>
+        </section>
+      </section>
+
+      <aside class="insights-panel">
+        <div class="insight-card">
+          <h3 class="insight-title">Performance Highlights</h3>
+          <ul class="insight-list">
+            <li>
+              <span class="insight-label">On-time Delivery</span>
+              <span class="insight-value">96%</span>
+            </li>
+            <li>
+              <span class="insight-label">Repeat Clients</span>
+              <span class="insight-value">38%</span>
+            </li>
+            <li>
+              <span class="insight-label">Average Response</span>
+              <span class="insight-value">2h</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="insight-card">
+          <h3 class="insight-title">Recent Projects</h3>
+          <ul class="project-list">
+            <li>
+              <div>
+                <strong>HealthTech Dashboard</strong>
+                <span class="project-meta">UI Engineering</span>
+              </div>
+              <span class="project-rating">★ 4.9</span>
+            </li>
+            <li>
+              <div>
+                <strong>Retail Analytics Portal</strong>
+                <span class="project-meta">Frontend Optimization</span>
+              </div>
+              <span class="project-rating">★ 4.7</span>
+            </li>
+            <li>
+              <div>
+                <strong>Fintech Compliance Tool</strong>
+                <span class="project-meta">Design System Build</span>
+              </div>
+              <span class="project-rating">★ 5.0</span>
+            </li>
+          </ul>
+        </div>
+      </aside>
+    </section>
+  </main>
+
+  <div class="modal" id="review-modal" aria-hidden="true">
+    <div class="modal-backdrop" id="close-review"></div>
+    <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="review-title">
+      <button class="modal-close" id="close-icon" aria-label="Close review form">×</button>
+      <h2 class="modal-title" id="review-title">Leave a Review</h2>
+      <form class="review-form">
+        <label class="form-label">Star Rating</label>
+        <div class="form-rating" role="radiogroup" aria-label="Select rating">
+          <button type="button" class="form-star" data-value="1">★</button>
+          <button type="button" class="form-star" data-value="2">★</button>
+          <button type="button" class="form-star" data-value="3">★</button>
+          <button type="button" class="form-star" data-value="4">★</button>
+          <button type="button" class="form-star" data-value="5">★</button>
+          <input type="hidden" name="rating" id="rating-value" value="0">
+        </div>
+        <label class="form-label" for="feedback">Feedback</label>
+        <textarea id="feedback" name="feedback" rows="5" placeholder="Share your experience"></textarea>
+        <button type="submit" class="button-primary submit-button">Submit Review</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const sidebar = document.getElementById('sidebar');
+    const openReview = document.getElementById('open-review');
+    const modal = document.getElementById('review-modal');
+    const closeReview = document.getElementById('close-review');
+    const closeIcon = document.getElementById('close-icon');
+    const stars = document.querySelectorAll('.form-star');
+    const ratingValue = document.getElementById('rating-value');
+
+    if (hamburger && sidebar) {
+      hamburger.addEventListener('click', () => {
+        sidebar.classList.toggle('show');
+      });
+    }
+
+    const toggleModal = (open) => {
+      if (open) {
+        modal.setAttribute('aria-hidden', 'false');
+        modal.classList.add('visible');
+      } else {
+        modal.setAttribute('aria-hidden', 'true');
+        modal.classList.remove('visible');
+      }
+    };
+
+    openReview.addEventListener('click', () => toggleModal(true));
+    closeReview.addEventListener('click', () => toggleModal(false));
+    closeIcon.addEventListener('click', () => toggleModal(false));
+
+    stars.forEach((star, index) => {
+      star.addEventListener('click', () => {
+        const value = index + 1;
+        ratingValue.value = value;
+        stars.forEach((s, i) => {
+          if (i <= index) {
+            s.classList.add('active');
+          } else {
+            s.classList.remove('active');
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>

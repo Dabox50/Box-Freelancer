@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>About Box Freelancer Local</title>
+</head>
+<body>
+  <div class="page">
+    <header class="header" id="siteHeader">
+      <div class="logo">
+        <img src="../Welcome Page/images/logo.svg" alt="Logo" width="80px">
+      </div>
+
+      <nav class="nav" id="navMenu">
+        <a href="../Welcome Page/index.html">Home</a>
+        <a href="../Dashboard Page/index.html">Browse Jobs</a>
+        <a href="../Create Account Page/index.html">Sign up</a>
+        <a href="index.html">About</a>
+        <a class="Login-btn" href="../Login Page/index.html">Login</a>
+      </nav>
+
+      <div class="menu-toggle" id="menuToggle">
+        <img src="../Dashboard Page/Icon Images/menu.png" alt="hamburger" width="10px">
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-content">
+          <p class="eyebrow">About Us</p>
+          <h1>Empowering Local Talent Worldwide</h1>
+          <p>Welcome to Box Freelancer Local, a growing freelance platform built to connect talented professionals with clients who value creativity, skill, and dedication. Founded in 2025, we started with one simple vision — to create a space where freelancers and businesses can work together smoothly, transparently, and with trust. Our journey began with a belief that freelancing should be more than just finding jobs or posting gigs — it should be about building meaningful connections, achieving goals, and growing careers. Whether you’re a skilled freelancer looking for opportunities or a client searching for reliable talent, [Your Website Name] was created to bring both worlds together in one professional, creative, and secure environment.</p>
+          <div class="hero-actions">
+            <a class="button1" href="../Dashboard Page/index.html">Explore Opportunities</a>
+            <a class="button-secondary" href="../Create Account Page/index.html">Join the Network</a>
+          </div>
+        </div>
+        <aside class="hero-visual">
+          <span class="tag">Global Reach</span>
+          <p class="caption">Workflows that help freelancers collaborate across borders while keeping the local economy thriving.</p>
+          <div class="stats">
+            <img class="img" src="../Welcome Page/images/Hero.png" alt="Hero Visual">
+          </div>
+        </aside>
+      </section>
+
+      <section class="section" id="impact">
+        <div class="section-head">
+          <h2 class="section-title">How We Help The World</h2>
+          <p class="section-copy">At Box Freelancer Local, we provide a professional environment where freelancers and clients can find each other, collaborate, and succeed. Our platform offers:</p>
+        </div>
+        <div class="grid">
+          <article class="card">
+            <div class="badge">
+              <img src="../Welcome Page/images/Verified.png" alt="" width="70px">
+            </div>
+
+            <h3>Local Economic Growth</h3>
+            <p>Businesses gain access to certified skills nearby, unlocking job creation and accelerating neighborhood development.</p>
+          </article>
+
+          <article class="card">
+            <div class="badge">
+              <img src="../Welcome Page/images/Payment.png" alt="" width="70px">
+            </div>
+
+            <h3>Inclusive Opportunities</h3>
+            <p>Underrepresented creators find fair, verified gigs tailored to their strengths, building sustainable careers.</p>
+          </article>
+
+          <article class="card">
+            <div class="badge">
+              <img src="../Welcome Page/images/Discovery.png" alt="" width="70px">
+            </div>
+
+            <h3>Global Collaboration</h3>
+            <p>Hybrid workflows blend local knowledge with global expertise, solving community challenges faster.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="story">
+        <div class="story">
+          <div class="story-content">
+            <h2 class="section-title">Our Vision</h2>
+            <p class="section-copy">Our Vision is to become Africa’s leading freelancing platform and a trusted global community for creative and digital professionals. We aim to help thousands of freelancers achieve 
+              financial independence while enabling businesses — big and small — to access top talent with ease. We see a future where location, background, or financial barriers no longer limit talent. With the right tools, 
+              training, and opportunities, anyone can succeed as a freelancer, and any business can find the perfect expert to bring their vision to life.
+            </p>
+
+            <h2 class="section-title">Join Us</h2>
+            <p class="section-copy">Whether you’re a freelancer ready to turn your talent into income or a client looking for reliable professionals to bring your ideas to life, [Your Website Name] welcomes you.
+              We are still growing, but every big dream starts small. What began as a simple idea in 2025 has quickly become a passionate community of creators, thinkers, and innovators building the future of work together.
+              Join us today and be part of this exciting journey — where opportunities are limitless, and success is shared. <br>
+              <strong>Together, we can make freelancing not just a job, but a lifestyle that inspires creativity, independence, and growth.</strong>
+            </p>
+            <a class="button2" href="../Create Account Page/index.html">Start Your Journey</a>
+          </div>
+          <div class="story-visual">
+            <img src="../Welcome Page/images/Illustration.png" alt="Collaboration" class="story-image">
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span>© 2025 Box FreeLancer. All rights reserved.</span>
+      <div class="social-links">
+        <a href="/">
+          <img src="../Welcome Page/images/Facebook.png" alt="Facebook">
+        </a>
+        <a href="/">
+          <img src="../Welcome Page/images/Instagam.png" alt="Instagram">
+        </a>
+        <a href="/">
+          <img src="../Welcome Page/images/Twitter.png" alt="Twitter">
+        </a>
+      </div>
+      <nav>
+       <a href="../Welcome Page/index.html">Home</a>
+        <a href="../Dashboard Page/index.html">Browse Jobs</a>
+        <a href="../Create Account Page/index.html">Sign up</a>
+        <a href="index.html">About</a>
+      </nav>
+    </footer>
+  </div>
+
+  <script>
+    const header = document.getElementById("siteHeader");
+    const menuToggle = document.getElementById("menuToggle");
+    const navMenu = document.getElementById("navMenu");
+
+    const closeMenu = () => {
+      navMenu.classList.remove("open");
+      menuToggle.setAttribute("aria-expanded", "false");
+    };
+
+    menuToggle.addEventListener("click", () => {
+      const isOpen = navMenu.classList.toggle("open");
+      menuToggle.setAttribute("aria-expanded", String(isOpen));
+    });
+
+    navMenu.querySelectorAll("a").forEach(link => {
+      link.addEventListener("click", closeMenu);
+    });
+
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 20) {
+        header.classList.add("scrolled");
+      } else {
+        header.classList.remove("scrolled");
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Create Account</title>
+</head>
+<body>
+    <main>
+        <header class="header" id="siteHeader">
+            <div class="logo">
+                <img src="../Welcome Page/images/logo.svg" alt="Logo" width="70px">
+            </div>
+
+            <nav class="nav" id="navMenu">
+                <a href="../Welcome Page/index.html">Home</a>
+                <a href="../Dashboard Page/index.html">Browse Jobs</a>
+                <a href="index.html">Sign up</a>
+                <a href="../About Us Page/index.html">About</a>
+                <a class="Login-btn" href="../Login Page/index.html">Login</a>
+            </nav>
+
+            <div class="menu-toggle" id="menuToggle">
+                <img src="../Dashboard Page/Icon Images/menu.png" alt="hamburger" width="10px">
+            </div>
+        </header>
+
+        <div class="combine">
+            <h1>Create Account</h1>
+            <form action="Create-Account">
+                <input type="FirstName" class="FirstName" placeholder="Firstname">
+                <input type="Surname" class="Surname" placeholder="Surname">
+                <input type="Email" class="Email" placeholder="Email">
+                <input type="Phone-Number" class="Phone-Number" placeholder="Phone Number">
+                <input type="Password" class="Password" placeholder="Password">
+                <input type="Re-enter Password" class="Re-enter" placeholder="Re-enter Password">
+                <button type="submit" class="Submit">Create Account</button>
+            </form>
+        </div>
+    </main>
+
+    <script>
+        const header = document.getElementById("siteHeader");
+        const menuToggle = document.getElementById("menuToggle");
+        const navMenu = document.getElementById("navMenu");
+
+        const closeMenu = () => {
+        navMenu.classList.remove("open");
+        menuToggle.setAttribute("aria-expanded", "false");
+        };
+
+        menuToggle.addEventListener("click", () => {
+        const isOpen = navMenu.classList.toggle("open");
+        menuToggle.setAttribute("aria-expanded", String(isOpen));
+        });
+
+        navMenu.querySelectorAll("a").forEach(link => {
+            link.addEventListener("click", closeMenu);
+        });
+
+        window.addEventListener("scroll", () => {
+        if (window.scrollY > 20) {
+            header.classList.add("scrolled");
+        } else {
+            header.classList.remove("scrolled");
+        }
+        });
+    </script>
+</body>
+</html>

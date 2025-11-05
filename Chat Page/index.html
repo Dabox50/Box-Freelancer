@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Chat - Freelancer Local</title>
+</head>
+<body>
+    <header class="header">
+        <div class="header-img">
+            <img class="img" src="../Welcome Page/images/logo.svg" alt="Logo" width="80px">
+        </div>
+
+        <img class="hamburger" id="hamburger" src="./menu.png" alt="Menu Icon" width="20px">
+
+        <div class="notif">
+            <div class="bell" aria-label="Notifications">
+                <img src="./notification.png" alt="Notification Bell" width="20px">
+                <span class="badge">3</span>
+            </div>
+        </div>
+    </header>
+
+    <main id="chat-page" class="page">
+        <div class="chat-container">
+            <aside class="sidebar" id="sidebar">
+                <header>
+                    <span class="eyebrow">Menu</span>
+                </header>
+                <nav>
+                    <ul>
+                        <li><a href="../Welcome Page/index.html">Welcome</a></li>
+                        <li><a href="../Dashboard Page/index.html">Dashboard</a></li>
+                        <li><a href="../Jobs Preview and Rating Page/index.html">My Jobs Reviews & Ratings</a></li>
+                        <li><a class="active" href="./index.html">Messages</a></li>
+                        <li><a href="../Payment Page/index.html">Payments</a></li>
+                        <li><a href="../Profile Page/index.html">Profile</a></li>
+                        <li><a href="../Settings Page/index.html">Settings</a></li>
+                    </ul>
+                </nav>
+            </aside>
+            
+            <div class="conversations-sidebar">
+                <div class="search-conversations">
+                    <input type="text" placeholder="Search conversations..." id="search-input">
+                </div>
+                <div class="conversations-list">
+                    <div class="conversation-item active" data-user="1">
+                        <img src="./avatar1.jpg" alt="Alex Johnson" class="conversation-avatar">
+                        <div class="conversation-info">
+                            <div class="conversation-header">
+                                <strong>Alex Johnson</strong>
+                                <span class="time">2m</span>
+                            </div>
+                            <p class="last-message">That sounds great! When can we...</p>
+                        </div>
+                        <span class="unread-badge">2</span>
+                    </div>
+
+                    <div class="conversation-item" data-user="2">
+                        <img src="./avatar2.jpg" alt="Sarah Smith" class="conversation-avatar">
+                        <div class="conversation-info">
+                            <div class="conversation-header">
+                                <strong>Sarah Smith</strong>
+                                <span class="time">1h</span>
+                            </div>
+                            <p class="last-message">Thanks for the update on the project</p>
+                        </div>
+                        <span class="unread-badge">1</span>
+                    </div>
+
+                    <div class="conversation-item" data-user="3">
+                        <img src="./avatar3.jpg" alt="Mike Chen" class="conversation-avatar">
+                        <div class="conversation-info">
+                            <div class="conversation-header">
+                                <strong>Mike Chen</strong>
+                                <span class="time">5h</span>
+                            </div>
+                            <p class="last-message">Can we schedule a call for tomorrow?</p>
+                        </div>
+                    </div>
+
+                    <div class="conversation-item" data-user="4">
+                        <img src="./avatar4.jpg" alt="Emma Davis" class="conversation-avatar">
+                        <div class="conversation-info">
+                            <div class="conversation-header">
+                                <strong>Emma Davis</strong>
+                                <span class="time">Yesterday</span>
+                            </div>
+                            <p class="last-message">I'll review the designs and get back to you</p>
+                        </div>
+                    </div>
+
+                    <div class="conversation-item" data-user="5">
+                        <img src="./avatar5.jpg" alt="James Wilson" class="conversation-avatar">
+                        <div class="conversation-info">
+                            <div class="conversation-header">
+                                <strong>James Wilson</strong>
+                                <span class="time">2d ago</span>
+                            </div>
+                            <p class="last-message">Perfect! Let's move forward with this</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="chat-window">
+                <div class="chat-header">
+                    <div class="chat-user-info">
+                        <img src="./avatar1.jpg" alt="Alex Johnson" class="chat-avatar">
+                        <div class="user-status">
+                            <strong id="chat-username">Alex Johnson</strong>
+                            <div class="status-indicator">
+                                <span class="status-dot online"></span>
+                                <span class="status-text" id="chat-status">Online</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="chat-actions">
+                        <button class="action-btn" title="Audio Call">
+                            <span>📞</span>
+                        </button>
+                        <button class="action-btn" title="Video Call">
+                            <span>🎥</span>
+                        </button>
+                        <button class="action-btn" title="More Options">
+                            <span>⋯</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="messages-area" id="messages-area">
+                    <div class="message-group">
+                        <div class="message sender">
+                            <div class="message-content">
+                                <p>Hey! How's the project coming along?</p>
+                                <span class="message-time">2:30 PM</span>
+                            </div>
+                        </div>
+                        <div class="message receiver">
+                            <div class="message-content">
+                                <p>Great! I've completed the first phase of the design.</p>
+                                <span class="message-time">2:35 PM</span>
+                            </div>
+                        </div>
+                        <div class="message receiver">
+                            <div class="message-bubble">
+                                <img src="" alt="Design mockup" class="message-image">
+                            </div>
+                            <span class="message-time">2:36 PM</span>
+                        </div>
+                    </div>
+
+                    <div class="message-group">
+                        <div class="message sender">
+                            <div class="message-content">
+                                <p>This looks amazing! I love the color scheme.</p>
+                                <span class="message-time">2:40 PM</span>
+                            </div>
+                        </div>
+                        <div class="message sender">
+                            <div class="message-bubble">
+                                <div class="file-attachment">
+                                    <span class="file-icon">📄</span>
+                                    <div class="file-info">
+                                        <strong>project_brief.pdf</strong>
+                                        <span>2.4 MB</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <span class="message-time">2:42 PM</span>
+                        </div>
+                        <div class="message receiver">
+                            <div class="message-content">
+                                <p>That sounds great! When can we schedule a meeting to discuss further?</p>
+                                <span class="message-time">2:45 PM</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="message-group">
+                        <div class="message sender">
+                            <div class="message-content">
+                                <p>How about tomorrow at 10 AM?</p>
+                                <span class="message-time">2:50 PM</span>
+                            </div>
+                        </div>
+                        <div class="message receiver">
+                            <div class="message-content">
+                                <p>Perfect! That works for me. See you then!</p>
+                                <span class="message-time">2:52 PM</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="input-area">
+                    <div class="input-wrapper">
+                        <button class="attach-btn" title="Attach File">
+                            <span>📎</span>
+                        </button>
+                        <input type="text" class="message-input" placeholder="Type a message..." id="message-input">
+                        <button class="emoji-btn" title="Add Emoji">
+                            <span>😊</span>
+                        </button>
+                        <button class="send-btn" title="Send Message">
+                            <span>➤</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <aside class="user-details-panel">
+                <div class="user-details-header">
+                    <strong>Alex Johnson</strong>
+                    <button class="close-panel">✕</button>
+                </div>
+
+                <div class="user-details-content">
+                    <div class="detail-card">
+                        <img src="./avatar1.jpg" alt="Alex Johnson" class="detail-avatar">
+                        <div class="detail-status">
+                            <span class="status-dot online"></span>
+                            <span>Online</span>
+                        </div>
+                    </div>
+
+                    <div class="detail-card">
+                        <h3 class="detail-label">Rating</h3>
+                        <div class="rating">
+                            <span class="stars">⭐ 4.9/5.0</span>
+                        </div>
+                    </div>
+
+                    <div class="detail-actions">
+                        <button class="detail-btn">View Profile</button>
+                        <button class="detail-btn secondary">Block User</button>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const sidebar = document.getElementById('sidebar');
+        const conversationItems = document.querySelectorAll('.conversation-item');
+        const messageInput = document.getElementById('message-input');
+        const sendBtn = document.querySelector('.send-btn');
+        const messagesArea = document.getElementById('messages-area');
+
+        hamburger.addEventListener('click', () => {
+            sidebar.classList.toggle('show');
+        });
+
+        conversationItems.forEach(item => {
+            item.addEventListener('click', () => {
+                conversationItems.forEach(i => i.classList.remove('active'));
+                item.classList.add('active');
+                
+                const userName = item.querySelector('strong').textContent;
+                document.getElementById('chat-username').textContent = userName;
+            });
+        });
+
+        sendBtn.addEventListener('click', () => {
+            const message = messageInput.value.trim();
+            if (message) {
+                const messageGroup = document.createElement('div');
+                messageGroup.className = 'message-group';
+                messageGroup.innerHTML = `
+                    <div class="message sender">
+                        <div class="message-content">
+                            <p>${message}</p>
+                            <span class="message-time">${new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}</span>
+                        </div>
+                    </div>
+                `;
+                messagesArea.appendChild(messageGroup);
+                messageInput.value = '';
+                messagesArea.scrollTop = messagesArea.scrollHeight;
+            }
+        });
+
+        messageInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                sendBtn.click();
+            }
+        });
+    </script>
+</body>
+</html>

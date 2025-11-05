@@ -1,0 +1,477 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap");
+:root {
+  --color-bg: #000000;
+  --color-bg-alt: #0f0330;
+  --color-primary: #ff4fd8;
+  --color-secondary: #22d6ff;
+  --color-accent: #70ffaf;
+  --color-text: #f4f5ff;
+  --color-muted: rgba(244, 245, 255, 0.932);
+  --radius-lg: 28px;
+  --radius-md: 20px;
+  --radius-sm: 14px;
+  --shadow-xl: 0 40px 80px rgba(20, 8, 51, 0.5);
+  --shadow-md: 0 5px 25px rgba(234, 226, 255, 0.151);
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background: radial-gradient(circle at top left, rgba(255, 79, 216, 0.25), transparent 45%), radial-gradient(circle at bottom right, rgba(34, 214, 255, 0.2), transparent 40%), linear-gradient(135deg, var(--color-bg), var(--color-bg-alt));
+    color: var(--color-text);
+    min-height: 100vh;
+    padding: 32px clamp(20px, 5vw, 60px);
+}
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 700px;
+    padding: 20px 10px 0 10px;
+    position: relative;
+    top: 10;
+    background: rgba(8, 0, 21, 0.75);
+    backdrop-filter: blur(16px);
+    transition: padding 0.3s ease, background 0.3s ease;
+    margin-bottom: 10px;
+}
+.header.scrolled {
+  background: rgba(8, 0, 21, 0.95);
+  padding: clamp(12px, 4vw, 20px) clamp(20px, 5vw, 36px);
+}
+.nav {
+    display: flex;
+    width: 50%;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 50px;
+}
+.nav a {
+    text-decoration: none;
+    font-size: 0.92rem;
+    color: var(--color-muted);
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+.nav a:hover {
+    color: var(--color-secondary);
+    transform: translateY(-2px);
+}
+.Login-btn {
+  display: flex;
+  background: rgba(255, 79, 216, 0.1);
+  border: 1px solid rgba(255, 79, 216, 0.4);
+  color: var(--color-primary);
+  padding: 10px 14px;
+  border-radius: var(--radius-sm);
+}
+.menu-toggle {
+  display: none;
+  background: rgba(255, 79, 216, 0.1);
+  border: 1px solid rgba(255, 79, 216, 0.4);
+  color: var(--color-primary);
+  padding: 10px 14px;
+  border-radius: var(--radius-sm);
+  font-size: 0.9rem;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+main {
+    width: 50%;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, rgba(255, 79, 216, 0.25), rgba(34, 214, 255, 0.15));
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-xl);
+    padding: 50px;
+    overflow: hidden;
+}
+.combine {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    gap: 5px;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    width: 100%;
+    height: 400px;
+}
+input{
+    margin-bottom: 10px;
+}
+.FirstName {
+    display: flex;
+    width: 80%;
+    height: 30px;
+    border-radius: 7px;
+    border-color: none;
+    border-style: none;
+    font-size: 1rem;
+    padding-left: 10px;
+    color: var(--color-bg);
+}
+.FirstName::placeholder {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--color-primary);
+}
+.Surname {
+    display: flex;
+    width: 80%;
+    height: 30px;
+    border-radius: 7px;
+    border-color: none;
+    border-style: none;
+    font-size: 1rem;
+    padding-left: 10px;
+    color: var(--color-bg);
+}
+.Surname::placeholder {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--color-primary);
+}
+.Email {
+    display: flex;
+    width: 80%;
+    height: 30px;
+    border-radius: 7px;
+    border-color: none;
+    border-style: none;
+    font-size: 1rem;
+    padding-left: 10px;
+    color: var(--color-bg);
+}
+.Email::placeholder {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--color-primary);
+}
+.Phone-Number {
+    display: flex;
+    width: 80%;
+    height: 30px;
+    border-radius: 7px;
+    border-color: none;
+    border-style: none;
+    font-size: 1rem;
+    padding-left: 10px;
+    color: var(--color-bg);
+}
+.Phone-Number::placeholder {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--color-primary);
+}
+.Password {
+    display: flex;
+    width: 80%;
+    height: 30px;
+    border-radius: 7px;
+    border-color: none;
+    border-style: none;
+    font-size: 1rem;
+    padding-left: 10px;
+    color: var(--color-bg);
+}
+.Password::placeholder {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--color-primary);
+}
+.Re-enter {
+    display: flex;
+    width: 80%;
+    height: 30px;
+    border-radius: 7px;
+    border-color: none;
+    border-style: none;
+    font-size: 1rem;
+    padding-left: 10px;
+    color: var(--color-bg);
+}
+.Re-enter::placeholder {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--color-primary);
+}
+.Submit {
+    background: linear-gradient(135deg, var(--color-primary), #ff7ef2);
+    box-shadow: var(--shadow-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    border: none;
+    padding: 10px 28px;
+    border-radius: 50px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--color-text);
+    cursor: pointer;
+    text-decoration: none;
+    margin-top: 20px;
+}
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(8, 0, 21, 0.7);
+  border-radius: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, var(--color-secondary), var(--color-primary));
+  border-radius: 8px;
+}
+@media (max-width:992px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background: radial-gradient(circle at top left, rgba(255, 79, 216, 0.25), transparent 45%), radial-gradient(circle at bottom right, rgba(34, 214, 255, 0.2), transparent 40%), linear-gradient(135deg, var(--color-bg), var(--color-bg-alt));
+        font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    .header {
+        display: flex;
+        width: 600px;
+        align-items: center;
+        justify-content: space-between;
+        padding: 5px 50px;
+        position: relative;
+        top: 0;
+        z-index: 1000;
+        background: rgba(8, 0, 21, 0.75);
+        backdrop-filter: blur(16px);
+        transition: padding 0.3s ease, background 0.3s ease;
+    }
+    .nav {
+        position: absolute;
+        inset: calc(100% + 0px) 210px auto;
+        flex-direction: column;
+        background: rgba(10, 0, 26, 0.96);
+        border-radius: var(--radius-md);
+        padding: 20px 5px;
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        box-shadow: var(--shadow-md);
+        opacity: 0;
+        pointer-events: none;
+        transform: translateY(-10px);
+        transition: opacity 0.3s ease, transform 0.3s ease;
+        gap: 20px;
+    }
+    .nav.open {
+        opacity: 1;
+        pointer-events: auto;
+        transform: translateY(0);
+    }
+    .menu-toggle {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+    }
+    main {
+        width: 70%;
+        height: 500px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 0px 60px;
+        overflow: hidden;
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: var(--radius-lg);
+        box-shadow: var(--shadow-xl);
+        background-image: url(../2759335.png);
+        backdrop-filter: blur;
+        background-repeat: no-repeat;
+    }
+    .Left {
+        display: none;
+    }
+    .Right {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        width: 90%;
+        height: 400px;
+        margin-left: 30px;
+        border-radius: var(--radius-md);
+        background: linear-gradient(135deg, rgb(255, 79, 217), rgb(34, 214, 255));
+    }
+}
+@media (max-width: 860px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background: radial-gradient(circle at top left, rgba(255, 79, 216, 0.25), transparent 45%), radial-gradient(circle at bottom right, rgba(34, 214, 255, 0.2), transparent 40%), linear-gradient(135deg, var(--color-bg), var(--color-bg-alt));
+        font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    .header {
+        display: flex;
+        width: 500px;
+        align-items: center;
+        justify-content: space-between;
+        padding: 5px 40px;
+        position: relative;
+        top: 0;
+        z-index: 1000;
+        background: rgba(8, 0, 21, 0.75);
+        backdrop-filter: blur(16px);
+        transition: padding 0.3s ease, background 0.3s ease;
+    }
+    .nav {
+        position: absolute;
+        inset: calc(100% + 0px) 120px auto;
+        flex-direction: column;
+        background: rgba(10, 0, 26, 0.96);
+        border-radius: var(--radius-md);
+        padding: 20px;
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        box-shadow: var(--shadow-md);
+        opacity: 0;
+        pointer-events: none;
+        transform: translateY(-10px);
+        transition: opacity 0.3s ease, transform 0.3s ease;
+        gap: 20px;
+    }
+    .nav.open {
+        opacity: 1;
+        pointer-events: auto;
+        transform: translateY(0);
+    }
+    .menu-toggle {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+    }
+    main {
+        width: 70%;
+        height: 500px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 0px 60px;
+        overflow: hidden;
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: var(--radius-lg);
+        box-shadow: var(--shadow-xl);
+        background-image: url(../2759335.png);
+        backdrop-filter: blur;
+        background-repeat: no-repeat;
+    }
+    .Left {
+        display: none;
+    }
+    .Right {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        width: 90%;
+        height: 400px;
+        margin-left: 30px;
+        border-radius: var(--radius-md);
+        background: linear-gradient(135deg, rgb(255, 79, 217), rgb(34, 214, 255));
+    }
+}
+@media (max-width: 700px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background: radial-gradient(circle at top left, rgba(255, 79, 216, 0.25), transparent 45%), radial-gradient(circle at bottom right, rgba(34, 214, 255, 0.2), transparent 40%), linear-gradient(135deg, var(--color-bg), var(--color-bg-alt));
+        font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    .header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 5px 50px;
+        position: relative;
+        top: 0;
+        z-index: 1000;
+        background: rgba(8, 0, 21, 0.75);
+        backdrop-filter: blur(16px);
+        transition: padding 0.3s ease, background 0.3s ease;
+    }
+    main {
+        width: 70%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: var(--radius-lg);
+        box-shadow: var(--shadow-xl);
+        padding: 0px 40px;
+        background-image: url(../2759335.png);
+        backdrop-filter: blur(-16px);
+        background-repeat: no-repeat;
+    }
+    .nav {
+        position: absolute;
+        inset: calc(100% + 10px) 40px auto;
+        flex-direction: column;
+        background: rgba(10, 0, 26, 0.96);
+        border-radius: var(--radius-md);
+        padding: 20px;
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        box-shadow: var(--shadow-md);
+        opacity: 0;
+        pointer-events: none;
+        transform: translateY(-10px);
+        transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+    .nav.open {
+        opacity: 1;
+        pointer-events: auto;
+        transform: translateY(0);
+    }
+    .menu-toggle {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+    }
+    .Left {
+        display: none;
+    }
+    .Right {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        width: 90%;
+        height: 400px;
+        margin-left: 30px;
+        border-radius: var(--radius-md);
+        background: linear-gradient(135deg, rgb(255, 79, 217), rgb(34, 214, 255));
+    }
+}

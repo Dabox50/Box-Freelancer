@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Login Page</title>
+</head>
+<body>
+    <main>
+        <header class="header" id="siteHeader">
+            <div class="logo">
+                <img src="../Welcome Page/images/logo.svg" alt="Logo" width="80px">
+            </div>
+
+            <nav class="nav" id="navMenu">
+                <a href="../Welcome Page/index.html">Home</a>
+                <a href="../Dashboard Page/index.html">Browse Jobs</a>
+                <a href="../Create Account Page/index.html">Sign up</a>
+                <a href="../About Us Page/index.html">About</a>
+                <a class="Login-btn" href="index.html">Login</a>
+            </nav>
+
+            <div class="menu-toggle" id="menuToggle">
+                <img src="../Dashboard Page/Icon Images/menu.png" alt="hamburger" width="10px">
+            </div>
+        </header>
+
+        <div class="combine">
+            <div class="Left">
+                <img class="img" src="/2759335.png" alt="Background Image">
+            </div>
+
+            <div class="Right">
+                <h2>LOGIN</h2>
+                <form id="Login-Form">
+                    <input type="text" id="text" placeholder="Username" required>
+                    <input type="password" id="password" placeholder="Password" required>
+                    <div class="reset">
+                        <label class="switch">
+                            <input type="checkbox" id="RememberMe">
+                            <span class="label-text">Remember Me</span>
+                        </label>
+                        <a href="/">Forget Password?</a>
+                    </div>
+                    <button type="submit" id="submit">Login</button>
+                    <a href="../Create Account Page/index.html" type="button" id="Create-Account">Create Account</a>
+                </form>
+            </div>
+        </div>
+        
+    </main>
+
+    <script>
+        const header = document.getElementById("siteHeader");
+        const menuToggle = document.getElementById("menuToggle");
+        const navMenu = document.getElementById("navMenu");
+
+        const closeMenu = () => {
+        navMenu.classList.remove("open");
+        menuToggle.setAttribute("aria-expanded", "false");
+        };
+
+        menuToggle.addEventListener("click", () => {
+        const isOpen = navMenu.classList.toggle("open");
+        menuToggle.setAttribute("aria-expanded", String(isOpen));
+        });
+
+        navMenu.querySelectorAll("a").forEach(link => {
+            link.addEventListener("click", closeMenu);
+        });
+
+        window.addEventListener("scroll", () => {
+        if (window.scrollY > 20) {
+            header.classList.add("scrolled");
+        } else {
+            header.classList.remove("scrolled");
+        }
+        });
+
+        document.getElementById('Login-Form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            // Add your login logic here
+            alert('Login form submitted!');
+        });
+
+        const Username = document.getElementById('Username');
+        const Password = document.getElementById('Password');
+        const RememberMe = document.getElementById('RememberMe');
+
+        if (Username === "text" && Password === "Password") {
+            alert("Login Successful");
+        } else {
+            alert("Invalid Credentials");
+        }
+        if (localStorage.getItem('RememberMe') === 'true') {
+            Username.value = localStorage.getItem('Username') || '';
+            Password.value = localStorage.getItem('Password') || '';
+            RememberMe.checked = true;
+        }
+    </script>
+</body>
+</html>

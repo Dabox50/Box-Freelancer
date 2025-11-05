@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Settings</title>
+</head>
+<body>
+    <header class="header">
+        <div class="header-img">
+            <img class="img" src="../Welcome Page/images/logo.svg" alt="Logo" width="80px">
+        </div>
+
+        <img class="hamburger" id="hamburger" src="./menu.png" alt="Menu Icon" width="20px">
+
+        <div class="notif">
+            <div class="bell" aria-label="Notifications">
+                <img src="../Dashboard Page/Icon Images/notification.png" alt="Notification Bell" width="20px">
+                <span class="badge">3</span>
+            </div>
+        </div>
+    </header>
+
+    <main id="settings-page" class="page">
+        <aside class="sidebar" id="sidebar">
+            <header>
+                <span class="eyebrow">Menu</span>
+            </header>
+            <nav>
+                <ul>
+                    <li><a href="../Welcome Page/index.html">Welcome</a></li>
+                    <li><a href="../Dashboard Page/index.html">Dashboard</a></li>
+                    <li><a href="../Jobs Preview and Rating Page/index.html">My Jobs Reviews & Ratings</a></li>
+                    <li><a href="../Chat Page/index.html">Messages</a></li>
+                    <li><a href="../Payment Page/index.html">Payments</a></li>
+                    <li><a href="../Profile Page/index.html">Profile</a></li>
+                    <li><a class="active" href="../Settings Page/index.html">Settings</a></li>
+                </ul>
+            </nav>
+        </aside>
+        
+        <div class="settings-container">
+            <div class="settings-content">
+                <div class="settings-header">
+                    <h1 class="eyebrow">⚙️ Settings</h1>
+                    <p class="subtitle">Manage your account preferences and settings</p>
+                </div>
+
+                <div class="settings-tabs">
+                    <button class="tab-btn active" data-tab="account">Account</button>
+                    <button class="tab-btn" data-tab="notifications">Notifications</button>
+                    <button class="tab-btn" data-tab="privacy">Privacy & Security</button>
+                    <button class="tab-btn" data-tab="billing">Billing</button>
+                    <button class="tab-btn" data-tab="preferences">Preferences</button>
+                </div>
+
+                <div class="tab-content" id="account">
+                    <div class="settings-card">
+                        <div class="card-header">
+                            <h2 class="eyebrow">Account Information</h2>
+                        </div>
+                        <div class="settings-form">
+                            <div class="form-group">
+                                <label for="fullname">Full Name</label>
+                                <input type="text" id="fullname" placeholder="Alamin Lamina" value="Alamin Lamina">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" placeholder="alamin@gmail.com" value="alamin@example.com">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" placeholder="+234 (809) 523-4534" value="+234 (809) 523-4534">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="location">Location</label>
+                                <input type="text" id="location" placeholder="Lagos, Nigeria" value="Lagos, Nigeria">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="bio">Bio</label>
+                                <textarea id="bio" placeholder="Tell us about yourself..." rows="4">Front-end developer passionate about creating clean, intuitive interfaces and building scalable systems.</textarea>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary">Save Changes</button>
+                        </div>
+                    </div>
+
+                    <div class="settings-card">
+                        <div class="card-header">
+                            <h2 class="eyebrow">Change Password</h2>
+                        </div>
+                        <div class="settings-form">
+                            <div class="form-group">
+                                <label for="current-pass">Current Password</label>
+                                <input type="password" id="current-pass" placeholder="Enter current password">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="new-pass">New Password</label>
+                                <input type="password" id="new-pass" placeholder="Enter new password">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="confirm-pass">Confirm Password</label>
+                                <input type="password" id="confirm-pass" placeholder="Confirm new password">
+                            </div>
+
+                            <button type="submit" class="btn btn-primary">Update Password</button>
+                        </div>
+                    </div>
+
+                    <div class="settings-card danger">
+                        <div class="card-header">
+                            <h2 class="eyebrow">Delete Account</h2>
+                            <p class="danger-text">⚠️ This action cannot be undone</p>
+                        </div>
+                        <p class="description">Permanently delete your account and all associated data.</p>
+                        <button class="btn btn-danger">Delete Account</button>
+                    </div>
+                </div>
+
+                <div class="tab-content" id="notifications" style="display: none;">
+                    <div class="settings-card">
+                        <div class="card-header">
+                            <h2 class="eyebrow">Email Notifications</h2>
+                        </div>
+                        <div class="settings-options">
+                            <div class="option-item">
+                                <div class="option-info">
+                                    <strong>New Messages</strong>
+                                    <p class="option-desc">Get notified when you receive new messages</p>
+                                </div>
+                                <label class="toggle">
+                                    <input type="checkbox" checked>
+                                    <span class="toggle-slider"></span>
+                                </label>
+                            </div>
+
+                            <div class="option-item">
+                                <div class="option-info">
+                                    <strong>Job Recommendations</strong>
+                                    <p class="option-desc">Receive job recommendations based on your skills</p>
+                                </div>
+                                <label class="toggle">
+                                    <input type="checkbox" checked>
+                                    <span class="toggle-slider"></span>
+                                </label>
+                            </div>
+
+                            <div class="option-item">
+                                <div class="option-info">
+                                    <strong>Payment Updates</strong>
+                                    <p class="option-desc">Get notified about payment receipts and withdrawals</p>
+                                </div>
+                                <label class="toggle">
+                                    <input type="checkbox" checked>
+                                    <span class="toggle-slider"></span>
+                                </label>
+                            </div>
+
+                            <div class="option-item">
+                                <div class="option-info">
+                                    <strong>Marketing Emails</strong>
+                                    <p class="option-desc">Receive promotional offers and platform updates</p>
+                                </div>
+                                <label class="toggle">
+                                    <input type="checkbox">
+                                    <span class="toggle-slider"></span>
+                                </label>
+                            </div>
+
+                            <div class="option-item">
+                                <div class="option-info">
+                                    <strong>Weekly Digest</strong>
+                                    <p class="option-desc">Get a weekly summary of your activity</p>
+                                </div>
+                                <label class="toggle">
+                                    <input type="checkbox" checked>
+                                    <span class="toggle-slider"></span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="settings-card">
+                        <div class="card-header">
+                            <h2 class="eyebrow">Push Notifications</h2>
+                        </div>
+                        <div class="settings-options">
+                            <div class="option-item">
+                                <div class="option-info">
+                                    <strong>Desktop Notifications</strong>
+                                    <p class="option-desc">Receive browser notifications</p>
+                                </div>
+                                <label class="toggle">
+                                    <input type="checkbox" checked>
+                                    <span class="toggle-slider"></span>
+                                </label>
+                            </div>
+
+                            <div class="option-item">
+                                <div class="option-info">
+                                    <strong>Mobile Notifications</strong>
+                                    <p class="option-desc">Receive notifications on your mobile device</p>
+                                </div>
+                                <label class="toggle">
+                                    <input type="checkbox" checked>
+                                    <span class="toggle-slider"></span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-content" id="privacy" style="display: none;">
+                    <div class="settings-card">
+                        <div class="card-header">
+                            <h2 class="eyebrow">Privacy Settings</h2>
+                        </div>
+                        <div class="settings-options">
+                            <div class="option-item">
+                                <div class="option-info">
+                                    <strong>Profile Visibility</strong>
+                                    <p class="option-desc">Allow other users to view your profile</p>
+                                </div>
+                                <label class="toggle">
+                                    <input type="checkbox" checked>
+                                    <span class="toggle-slider"></span>
+                                </label>
+                            </div>
+
+                            <div class="option-item">
+                                <div class="option-info">
+                                    <strong>Show Online Status</strong>
+                                    <p class="option-desc">Let others see when you're online</p>
+                                </div>
+                                <label class="toggle">
+                                    <input type="checkbox" checked>
+                                    <span class="toggle-slider"></span>
+                                </label>
+                            </div>
+
+                            <div class="option-item">
+                                <div class="option-info">
+                                    <strong>Allow Messages from Anyone</strong>
+                                    <p class="option-desc">Enable to receive messages from non-connections</p>
+                                </div>
+                                <label class="toggle">
+                                    <input type="checkbox">
+                                    <span class="toggle-slider"></span>
+                                </label>
+                            </div>
+
+                            <div class="option-item">
+                                <div class="option-info">
+                                    <strong>Show Last Seen</strong>
+                                    <p class="option-desc">Let others know when you were last active</p>
+                                </div>
+                                <label class="toggle">
+                                    <input type="checkbox" checked>
+                                    <span class="toggle-slider"></span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="settings-card">
+                        <div class="card-header">
+                            <h2 class="eyebrow">Security Settings</h2>
+                        </div>
+                        <div class="settings-options">
+                            <div class="option-item">
+                                <div class="option-info">
+                                    <strong>Two-Factor Authentication</strong>
+                                    <p class="option-desc">Add an extra layer of security to your account</p>
+                                </div>
+                                <button class="btn btn-secondary">Enable</button>
+                            </div>
+
+                            <div class="option-item">
+                                <div class="option-info">
+                                    <strong>Active Sessions</strong>
+                                    <p class="option-desc">Manage your active login sessions</p>
+                                </div>
+                                <button class="btn btn-secondary">View All</button>
+                            </div>
+
+                            <div class="option-item">
+                                <div class="option-info">
+                                    <strong>Connected Apps</strong>
+                                    <p class="option-desc">View and manage third-party app access</p>
+                                </div>
+                                <button class="btn btn-secondary">Manage</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-content" id="billing" style="display: none;">
+                    <div class="settings-card">
+                        <div class="card-header">
+                            <h2 class="eyebrow">Payment Methods</h2>
+                        </div>
+                        <div class="payment-methods">
+                            <div class="payment-card">
+                                <div class="card-details">
+                                    <span class="card-type">💳</span>
+                                    <div class="card-info">
+                                        <strong>Visa ending in 4242</strong>
+                                        <p>Expires 12/25</p>
+                                    </div>
+                                </div>
+                                <div class="card-actions">
+                                    <button class="card-btn">Edit</button>
+                                    <button class="card-btn">Remove</button>
+                                </div>
+                            </div>
+
+                            <div class="payment-card">
+                                <div class="card-details">
+                                    <span class="card-type">🏦</span>
+                                    <div class="card-info">
+                                        <strong>PayPal Account</strong>
+                                        <p>alex@paypal.com</p>
+                                    </div>
+                                </div>
+                                <div class="card-actions">
+                                    <button class="card-btn">Edit</button>
+                                    <button class="card-btn">Remove</button>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary">Add Payment Method</button>
+                    </div>
+
+                    <div class="settings-card">
+                        <div class="card-header">
+                            <h2 class="eyebrow">Billing Information</h2>
+                        </div>
+                        <div class="settings-form">
+                            <div class="form-group">
+                                <label for="billing-name">Full Name</label>
+                                <input type="text" id="billing-name" placeholder="Alex Johnson">
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="billing-address">Street Address</label>
+                                    <input type="text" id="billing-address" placeholder="123 Main Street">
+                                </div>
+                                <div class="form-group">
+                                    <label for="billing-city">City</label>
+                                    <input type="text" id="billing-city" placeholder="London">
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="billing-state">State/Province</label>
+                                    <input type="text" id="billing-state" placeholder="State">
+                                </div>
+                                <div class="form-group">
+                                    <label for="billing-zip">Postal Code</label>
+                                    <input type="text" id="billing-zip" placeholder="12345">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="billing-country">Country</label>
+                                <select id="billing-country">
+                                    <option>United Kingdom</option>
+                                    <option>United States</option>
+                                    <option>Canada</option>
+                                </select>
+                            </div>
+
+                            <button class="btn btn-primary">Update Billing Address</button>
+                        </div>
+                    </div>
+
+                    <div class="settings-card">
+                        <div class="card-header">
+                            <h2 class="eyebrow">Invoice History</h2>
+                        </div>
+                        <div class="invoice-table">
+                            <div class="invoice-row header">
+                                <span>Date</span>
+                                <span>Amount</span>
+                                <span>Status</span>
+                                <span>Action</span>
+                            </div>
+                            <div class="invoice-row">
+                                <span>Oct 15, 2025</span>
+                                <span>$1,500.00</span>
+                                <span class="badge-success">Paid</span>
+                                <button class="invoice-btn">Download</button>
+                            </div>
+                            <div class="invoice-row">
+                                <span>Sep 15, 2025</span>
+                                <span>$1,250.00</span>
+                                <span class="badge-success">Paid</span>
+                                <button class="invoice-btn">Download</button>
+                            </div>
+                            <div class="invoice-row">
+                                <span>Aug 15, 2025</span>
+                                <span>$2,000.00</span>
+                                <span class="badge-success">Paid</span>
+                                <button class="invoice-btn">Download</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-content" id="preferences" style="display: none;">
+                    <div class="settings-card">
+                        <div class="card-header">
+                            <h2 class="eyebrow">Display Preferences</h2>
+                        </div>
+                        <div class="settings-options">
+                            <div class="option-item">
+                                <div class="option-info">
+                                    <strong>Theme</strong>
+                                    <p class="option-desc">Choose your preferred color theme</p>
+                                </div>
+                                <select class="select-input">
+                                    <option selected>Dark Mode</option>
+                                    <option>Light Mode</option>
+                                    <option>Auto</option>
+                                </select>
+                            </div>
+
+                            <div class="option-item">
+                                <div class="option-info">
+                                    <strong>Language</strong>
+                                    <p class="option-desc">Select your preferred language</p>
+                                </div>
+                                <select class="select-input">
+                                    <option selected>English</option>
+                                    <option>Spanish</option>
+                                    <option>French</option>
+                                    <option>German</option>
+                                </select>
+                            </div>
+
+                            <div class="option-item">
+                                <div class="option-info">
+                                    <strong>Timezone</strong>
+                                    <p class="option-desc">Set your timezone for accurate scheduling</p>
+                                </div>
+                                <select class="select-input">
+                                    <option selected>UTC+00:00 London</option>
+                                    <option>UTC+01:00 West Africa</option>
+                                    <option>UTC-05:00 Eastern Time</option>
+                                </select>
+                            </div>
+
+                            <div class="option-item">
+                                <div class="option-info">
+                                    <strong>Date Format</strong>
+                                    <p class="option-desc">Choose how dates are displayed</p>
+                                </div>
+                                <select class="select-input">
+                                    <option selected>MM/DD/YYYY</option>
+                                    <option>DD/MM/YYYY</option>
+                                    <option>YYYY-MM-DD</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="settings-card">
+                        <div class="card-header">
+                            <h2 class="eyebrow">Workspace Preferences</h2>
+                        </div>
+                        <div class="settings-options">
+                            <div class="option-item">
+                                <div class="option-info">
+                                    <strong>Compact View</strong>
+                                    <p class="option-desc">Use a more compact layout for content</p>
+                                </div>
+                                <label class="toggle">
+                                    <input type="checkbox">
+                                    <span class="toggle-slider"></span>
+                                </label>
+                            </div>
+
+                            <div class="option-item">
+                                <div class="option-info">
+                                    <strong>Show Animations</strong>
+                                    <p class="option-desc">Enable smooth animations and transitions</p>
+                                </div>
+                                <label class="toggle">
+                                    <input type="checkbox" checked>
+                                    <span class="toggle-slider"></span>
+                                </label>
+                            </div>
+
+                            <div class="option-item">
+                                <div class="option-info">
+                                    <strong>Keyboard Shortcuts</strong>
+                                    <p class="option-desc">Enable keyboard shortcuts for quick actions</p>
+                                </div>
+                                <label class="toggle">
+                                    <input type="checkbox" checked>
+                                    <span class="toggle-slider"></span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="settings-card">
+                        <div class="card-header">
+                            <h2 class="eyebrow">Data & Privacy</h2>
+                        </div>
+                        <div class="settings-options">
+                            <div class="option-item">
+                                <div class="option-info">
+                                    <strong>Download Your Data</strong>
+                                    <p class="option-desc">Get a copy of all your personal data</p>
+                                </div>
+                                <button class="btn btn-secondary">Download</button>
+                            </div>
+
+                            <div class="option-item">
+                                <div class="option-info">
+                                    <strong>Clear Cache</strong>
+                                    <p class="option-desc">Clear all cached data to free up space</p>
+                                </div>
+                                <button class="btn btn-secondary">Clear</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const sidebar = document.getElementById('sidebar');
+        const tabBtns = document.querySelectorAll('.tab-btn');
+        const tabContents = document.querySelectorAll('.tab-content');
+
+        hamburger.addEventListener('click', () => {
+            sidebar.classList.toggle('show');
+        });
+
+        tabBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const tabName = btn.getAttribute('data-tab');
+
+                tabBtns.forEach(b => b.classList.remove('active'));
+                tabContents.forEach(c => c.style.display = 'none');
+
+                btn.classList.add('active');
+                document.getElementById(tabName).style.display = 'block';
+            });
+        });
+
+        const toggles = document.querySelectorAll('.toggle input');
+        toggles.forEach(toggle => {
+            toggle.addEventListener('change', () => {
+                console.log('Toggle switched:', toggle.checked);
+            });
+        });
+
+        const saveButtons = document.querySelectorAll('.btn-primary');
+        saveButtons.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                if (btn.textContent.includes('Save') || btn.textContent.includes('Update')) {
+                    e.preventDefault();
+                    alert('Changes saved successfully!');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

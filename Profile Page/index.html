@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Profile - Freelancer Local</title>
+</head>
+<body>
+    <header class="header">
+        <div class="header-img">
+        <img class="img" src="../Welcome Page/images/logo.svg" alt="Logo" width="80px">
+        </div>
+
+        <img class="hamburger" id="hamburger" src="./menu.png" alt="Menu Icon" width="20px" margin-right="200px">
+
+        <div class="notif">
+        <div class="bell" aria-label="Notifications">
+            <img src="./notification.png" alt="Notification Bell" width="20px">
+            <span class="badge">3</span>
+        </div>
+        </div>
+    </header>
+
+    <main id="profile" class="page">
+        <aside class="sidebar" id="sidebar">
+            <header>
+                <span class="eyebrow">Menu</span>
+            </header>
+            <nav>
+                <ul>
+                    <li><a href="../Welcome Page/index.html">Welcome</a></li>
+                    <li><a href="../Dashboard Page/index.html">Dashboard</a></li>
+                    <li><a href="../Jobs Preview and Rating Page/index.html">My Jobs Reviews & Ratings</a></li>
+                    <li><a href="../Chat Page/index.html">Messages</a></li>
+                    <li><a href="../Payment Page/index.html">Payments</a></li>
+                    <li><a class="active" href="../Profile Page/index.html">Profile</a></li>
+                    <li><a href="../Settings Page/index.html">Settings</a></li>
+                </ul>
+            </nav>
+        </aside>
+        
+        <section class="profile-grid">
+            <div class="stack">
+                <div class="card">
+                    <div class="profile-header">
+                        <img class="avatar" src="/2755436.jpg" alt="Alex Johnson Profile">
+                        <div>
+                            <h2 class="eyebrow">Alex Johnson <img src="../Welcome Page/images/Verified.png" alt="Verified" style="width:20px;height:20px;vertical-align:middle"></h2>
+                            <div class="meta"><span>📍 London, UK</span><span>⭐ 4.9/5.0</span></div>
+                        </div>
+                    </div>
+
+                    <div class="tabs">
+                        <button class="tab active" data-tab="overview">Overview</button>
+                        <button class="tab" data-tab="portfolio">Portfolio</button>
+                        <button class="tab" data-tab="skills">Skills & Certs</button>
+                        <button class="tab" data-tab="reviews">Reviews</button>
+                    </div>
+                </div>
+
+                <div id="overview" class="tab-content active">
+                    <div class="card">
+                        <h3 class="eyebrow">Professional Overview</h3>
+                        <p class="caption">Full‑stack developer passionate about creating clean, intuitive interfaces and building scalable systems. Experienced in modern web technologies with a track record of delivering high-quality projects on time.</p>
+                        <p class="caption">Specialized in:</p>
+                        <div class="list">
+                            <span class="badge">React</span>
+                            <span class="badge">TypeScript</span>
+                            <span class="badge">Node.js</span>
+                            <span class="badge">UI/UX</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="portfolio" class="tab-content">
+                    <div class="card2">
+                        <h3 class="eyebrow">Featured Projects</h3>
+                        <div class="two-col">
+                            <div class="card">
+                                <strong>SaaS Dashboard</strong>
+                                <p class="caption">Admin analytics interface with interactive charts, real-time data visualization, and comprehensive reporting tools.</p>
+                            </div>
+                            <div class="card">
+                                <strong>E‑commerce App</strong>
+                                <p class="caption">Full-featured product listing and seamless checkout flow with payment integration and order tracking.</p>
+                            </div>
+                        </div>
+                        <div class="two-col">
+                            <div class="card">
+                                <strong>Mobile CRM</strong>
+                                <p class="caption">Cross-platform mobile application for customer relationship management with offline capabilities.</p>
+                            </div>
+                            <div class="card">
+                                <strong>Design System</strong>
+                                <p class="caption">Comprehensive component library and design guidelines used across multiple enterprise projects.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="skills" class="tab-content">
+                    <div class="card">
+                        <h3 class="eyebrow">Technical Skills</h3>
+                        <div>
+                            <p class="caption"><strong>Frontend:</strong></p>
+                            <div class="list">
+                                <span class="badge">React</span>
+                                <span class="badge">Vue.js</span>
+                                <span class="badge">TypeScript</span>
+                                <span class="badge">Tailwind CSS</span>
+                            </div>
+                        </div>
+                        <div>
+                            <p class="caption"><strong>Backend:</strong></p>
+                            <div class="list">
+                                <span class="badge">Node.js</span>
+                                <span class="badge">Python</span>
+                                <span class="badge">PostgreSQL</span>
+                                <span class="badge">REST APIs</span>
+                            </div>
+                        </div>
+                        <div>
+                            <p class="caption"><strong>Certifications:</strong></p>
+                            <div class="list">
+                                <span class="badge">AWS Solutions Architect</span>
+                                <span class="badge">React Expert</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="reviews" class="tab-content">
+                    <div class="card">
+                        <h3 class="eyebrow">Client Reviews</h3>
+                        <div class="list">
+                            <div class="item">
+                                <div>
+                                    <strong>Great communication</strong>
+                                    <p class="caption">Delivered ahead of schedule with exceptional attention to detail and responsiveness throughout the project.</p>
+                                </div>
+                                <span>⭐ 5.0</span>
+                            </div>
+                            <div class="item">
+                                <div>
+                                    <strong>High quality work</strong>
+                                    <p class="caption">Would hire again. Professional approach and clean code made the handoff seamless.</p>
+                                </div>
+                                <span>⭐ 4.8</span>
+                            </div>
+                            <div class="item">
+                                <div>
+                                    <strong>Exceeded expectations</strong>
+                                    <p class="caption">Went above and beyond. Suggested improvements that enhanced the final product significantly.</p>
+                                </div>
+                                <span>⭐ 5.0</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <aside class="side-card1">
+                <div class="card1">
+                    <h3 class="eyebrow">Availability</h3>
+                    <p class="caption">Open to work</p>
+                    <p class="caption">20 hrs/week</p>
+                </div>
+
+                <div class="card1">
+                    <h3 class="eyebrow">Hourly Rate</h3>
+                    <p class="caption">$45/hr</p>
+                </div>
+
+                <div class="card1">
+                    <button class="button1">💬 Contact / Message</button>
+                </div>
+
+                <div class="card1">
+                    <h3 class="eyebrow">Quick Stats</h3>
+                    <div>
+                        <p class="caption">✅ 25+ Projects Completed</p>
+                        <p class="caption">⏱️ 1200+ Hours Worked</p>
+                        <p class="caption">📊 98% Client Satisfaction</p>
+                    </div>
+                </div>
+            </aside>
+        </section>
+    </main>
+
+    <script>
+        const tabs = document.querySelectorAll('.tab');
+        const contents = document.querySelectorAll('.tab-content');
+
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                tabs.forEach(t => t.classList.remove('active'));
+                contents.forEach(c => c.classList.remove('active'));
+
+                tab.classList.add('active');
+                const tabName = tab.getAttribute('data-tab');
+                document.getElementById(tabName).classList.add('active');
+            });
+        });
+
+        const hamburger = document.getElementById('hamburger');
+        const sidebar = document.getElementById('sidebar')
+
+        hamburger.addEventListener('click', () => {
+            sidebar.classList.toggle('show');
+        });
+    </script>
+</body>
+</html>
