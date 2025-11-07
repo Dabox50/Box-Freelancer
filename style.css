@@ -503,7 +503,7 @@ body {
     display: flex;
     width: 200px;
     position: absolute;
-    inset: calc(100% + 10px) 180px auto;
+    inset: calc(100% + 10px) 40% auto;
     flex-direction: column;
     background: rgba(10, 0, 26, 0.96);
     border-radius: var(--radius-md);
@@ -563,12 +563,38 @@ body {
   .page {
     border-radius: 22px;
   }
+  .nav {
+    inset: calc(100% + 10px) 140px auto;
+  }
   .hero {
-    padding: 48px 24px 40px;
+    padding: 48px 40px;
+  }
+  .hero-content {
+    margin-right: 20px;
   }
   .button1:hover {
     background: #0f0330;
     transform: translateY(-6px);
+  }
+
+  .hero-content h1 {
+    margin-left: 10px;
+  }
+  .hero-content .eyebrow {
+    display: flex;
+    width: 90%;
+    font-weight: 600;
+    letter-spacing: 0.7em;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 1.5rem;
+    color: var(--color-secondary);
+  }
+  .hero p {
+    margin-top: clamp(18px, 4vw, 26px);
+    width: 400px;
+    color: var(--color-muted);
+    text-align: center;
   }
   #services .grid {
     grid-template-columns: repeat(1, minmax(0, 1fr));
