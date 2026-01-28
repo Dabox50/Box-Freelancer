@@ -192,7 +192,7 @@ header {
 .field {
     display: flex;
     flex-direction: column;
-    width: 25rem;
+    width: 22rem;
     height: 12rem;
     gap: 6px;
 }

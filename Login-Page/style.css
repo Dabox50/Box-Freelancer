@@ -31,7 +31,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    width: 1000px;
+    width: 135%;
     padding: 10px 0 0 0;
     position: relative;
     top: 0;
@@ -92,16 +92,17 @@ main {
     background: rgba(255, 255, 255, 0.05);
     border-radius: var(--radius-lg);
     box-shadow: var(--shadow-xl);
-    padding: 0px 80px;
+    padding: 0px 50px;
     overflow: hidden;
 }
 .combine {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     width: 100%;
     height: auto;
-    gap: 20px;
+    gap: 60px;
+    margin-left: 30px;
 }
 .Left {
     display: flex;
@@ -123,7 +124,6 @@ main {
     align-items: flex-start;
     width: 50%;
     height: 400px;
-    margin-left: 40px;
     border-radius: var(--radius-md);
     background: linear-gradient(135deg, rgba(255, 79, 216, 0.25), rgba(34, 214, 255, 0.15));
 }
